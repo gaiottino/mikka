@@ -29,4 +29,8 @@ module Akka
   module Routing
     include_package 'akka.routing'
   end
+  
+  module Dispatch
+    include_package 'akka.dispatch'
+  end
 end

@@ -2,7 +2,7 @@
 
 require 'java'
 require 'akka'
-
+require 'mikka/dispatch'
 
 module Mikka
   import java.util.Arrays
@@ -160,6 +160,7 @@ module Mikka
   
   class Actor < Akka::Actor::UntypedActor
     include SupervisionDsl
+    include DispatcherDsl
     include RubyesqueActorCallbacks
     include ImplicitSender
   end
